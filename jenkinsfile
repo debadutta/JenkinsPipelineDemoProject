@@ -6,21 +6,21 @@ pipeline {
         stage('Clean') {
             steps {
                 echo "Cleaning Project"
-                bat "mvn clean"
+                sh "mvn clean"
             }
         }
 
         stage('Compile') {
             steps {
                 echo "Compiling Project"
-                bat "mvn compile"
+                sh "mvn compile"
             }
         }
 
         stage('Test') {
             steps {
                 echo "Executing Tests"
-                bat "mvn test"
+                sh "mvn test"
             }
         }
 
